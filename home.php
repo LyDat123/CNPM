@@ -13,7 +13,7 @@
               <div class="item active">
                 <div class="col-sm-6">
                   <h1><span>NPIF</span>-SHOP</h1>
-                  <h2>Free E-Commerce Template</h2>
+                  <h2>Siêu Sale Mùa Hè</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                  
                 </div>
@@ -25,7 +25,7 @@
               <div class="item">
                 <div class="col-sm-6">
                 <h1><span>NPIF</span>-SHOP</h1>
-                  <h2>100% Responsive Design</h2>
+                  <h2>100% Free Shipping Toàn Quốc</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                  
                 </div>
@@ -38,7 +38,7 @@
               <div class="item">
                 <div class="col-sm-6">
                 <h1><span>NPIF</span>-SHOP</h1>
-                  <h2>Free Ecommerce Template</h2>
+                  <h2>Thời trang nữ giảm giá</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                  
                 </div>
@@ -72,7 +72,7 @@
         
         <div class="col-sm-9 padding-right">
           <div class="features_items"><!--features_items-->
-            <h2 class="title text-center">Features Items</h2>
+            <h2 class="title text-center">Sản phẩm nổi bật</h2>
 
             <?php
 
@@ -96,13 +96,13 @@
                       <img src="<?php  echo web_root.'admin/products/'. $result->IMAGES; ?>" alt="" />
                       <h2>&#36 <?php  echo $result->PRODISPRICE; ?></h2>
                       <p><?php  echo    $result->PRODESC; ?></p>
-                      <button type="submit" name="btnorder" class="btn add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                      <button type="submit" name="btnorder" class="btn add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</button>
                     </div>
                     <div class="product-overlay" >
                       <div class="overlay-content">
                         <h3>&#36 <?php  echo $result->PRODISPRICE; ?></h3>
                         <p><?php  echo    $result->PRODESC; ?></p>
-                       <button type="submit" name="btnorder" class="add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                       <button type="submit" name="btnorder" class="add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</button>
                       </div>
                     </div>
                 </div>
@@ -132,7 +132,7 @@
           </div><!--features_items--> 
           
           <div class="recommended_items"><!--recommended_items-->
-            <h2 class="title text-center">recommended items</h2>
+            <h2 class="title text-center">Sản phẩm Tương Tự</h2>
             
             <div id="recommended-item-carousel"class="carousel slide" data-ride="carousel">
               <div class="carousel-inner" >
@@ -187,7 +187,7 @@
                           <img src="<?php  echo web_root.'admin/products/'. $result->IMAGES; ?>" alt="" />
                           <h2>&#36 <?php  echo $result->PRODISPRICE; ?></h2>
                           <p><?php  echo    $result->PRODESC; ?></p>
-                           <button type="submit" name="btnorder" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                           <button type="submit" name="btnorder" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</button>
                         </div>
                         
                       </div>

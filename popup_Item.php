@@ -47,14 +47,14 @@ $query = "SELECT * FROM `tblpromopro` pr , `tblproduct` p , `tblcategory` c
                 <!-- <h3>Project Details</h3> -->
                 <ul>
                  <!--    <li>Model - <?php echo $result->PROMODEL; ?></li> -->
-                    <li>Type - <?php echo $result->PRODESC; ?></li>
-                    <li>Price - &#36 <?php echo $result->PROPRICE; ?></li> 
-                    <li>Discount - <?php echo $result->PRODISCOUNT; ?> % </li> 
-                    <li>Discounted Price - &#36 <?php echo $result->PRODISPRICE; ?> </li> 
-                    <li>Available Quantity - <?php echo $result->PROQTY; ?></li>
+                    <li>Loại - <?php echo $result->PRODESC; ?></li>
+                    <li>Gía - &#36 <?php echo $result->PROPRICE; ?></li> 
+                    <li>Giảm giá - <?php echo $result->PRODISCOUNT; ?> % </li> 
+                    <li>Gía được giảm - &#36 <?php echo $result->PRODISPRICE; ?> </li> 
+                    <li>Số lượng hàng - <?php echo $result->PROQTY; ?></li>
                 </ul>
 
-                 <button  type="submit"  class="btn btn-pup btn-sm"  name="btnorder">Order Now!</button>
+                 <button  type="submit"  class="btn btn-pup btn-sm"  name="btnorder">Đặt ngay!</button>
             </div>
     
         </div>

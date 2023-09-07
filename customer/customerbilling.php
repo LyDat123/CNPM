@@ -19,24 +19,24 @@ $query = "SELECT * FROM `tblsummary` s ,`tblcustomer` c
         <img src="<?php echo web_root; ?>images/bg2.jpg"  height="90px" style="-webkit-border-radius:5px; -moz-border-radius:5px;" alt="Image">
             </td>
         <td width="87%" align="center">
-        <h3 >Bachelor of Science and Entrepreneurs</h3> 
+        <h3 >NPIF Shop</h3> 
         </td>
       </tr>
     </table>
     
      
   <!--  <div class="modal-body">  -->
-  <h5>Your order is on process. Please check your profile for notification of confirmation.</h5>
+  <h5>Đơn đặt hàng của bạn đang được xử lý. Vui lòng kiểm tra hồ sơ của bạn để biết thông báo xác nhận.</h5>
  
 <hr/> 
- <h4><strong>Order Information</strong></h4>
+ <h4><strong>Thông Tin Đặt Hàng</strong></h4>
     <table id="table" class="table">
       <thead>
         <tr>
-          <th>PRODUCT</th>
-          <th>PRICE</th>
-          <th>QUANTITY</th>
-          <th>TOTAL PRICE</th>
+          <th>SẢN PHẨM</th>
+          <th>GIÁ</th>
+          <th>SỐ LƯỢNG</th>
+          <th>GIÁ TỔNG</th>
           <th></th> 
         </tr>
         </thead>
@@ -89,14 +89,14 @@ $query = "SELECT * FROM `tblsummary` s ,`tblcustomer` c
        </table> <hr/>
     <div class="row">
         <div class="col-md-6 pull-left">
-         <div>Ordered Date : <?php echo date_format(date_create($cur->ORDEREDDATE),"M/d/Y h:i:s"); ?></div> 
-          <div>Payment Method : <?php echo $cur->PAYMENTMETHOD; ?></div>
+         <div>Ngày Đặt Hàng : <?php echo date_format(date_create($cur->ORDEREDDATE),"M/d/Y h:i:s"); ?></div> 
+          <div>Phương Thức Thanh Toán : <?php echo $cur->PAYMENTMETHOD; ?></div>
 
         </div>
         <div class="col-md-6 pull-right">
-          <p align="right">Total Price : &#8369 <?php echo number_format($tot,2);?></p>
-          <p align="right">Delivery Fee : &#8369 <?php echo number_format($price,2); ?></p>
-          <p align="right">Overall Price : &#8369 <?php echo number_format($cur->PAYMENT,2); ?></p>
+          <p align="right">Tổng Gía : &#8369 <?php echo number_format($tot,2);?></p>
+          <p align="right">Phí Giao Hàng : &#8369 <?php echo number_format($price,2); ?></p>
+          <p align="right">Gía Tổng Thể : &#8369 <?php echo number_format($cur->PAYMENT,2); ?></p>
         </div>
       </div>
      

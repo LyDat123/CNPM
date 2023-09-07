@@ -10,9 +10,9 @@
               <!-- Nav tabs -->
 
               <ul class="nav nav-pills">
-                  <li class="active"><a class="btn btn-default check_out" href="#home" data-toggle="tab">Login</a>
+                  <li class="active"><a class="btn btn-default check_out" href="#home" data-toggle="tab">Đăng Nhặp</a>
                   </li>
-                  <li><a class="btn btn-default check_out" href="#profile" data-toggle="tab">Sign Up</a>
+                  <li><a class="btn btn-default check_out" href="#profile" data-toggle="tab">Đăng Ký</a>
                   </li>
                   
               </ul>
@@ -23,7 +23,7 @@
                       <!-- <h4>Login Tab</h4>  -->
                        <div class="panel panel-pup">
                         <div class="panel-heading">
-                            Login Details
+                            Thông tin đăng nhập
                         </div>
                         <div class="panel-body">
 
@@ -32,10 +32,10 @@
                                 <div class="form-group">
                                   <div class="col-md-10">
                                     <label class="col-md-4 control-label" for=
-                                    "U_USERNAME">Username:</label>
+                                    "U_USERNAME">Tên tài khoản:</label>
                                     
                                     <div class="col-md-8">
-                                       <input   id="U_USERNAME" name="U_USERNAME" placeholder="Username" type="text" class="form-control input-sm" > 
+                                       <input   id="U_USERNAME" name="U_USERNAME" placeholder="Tên tài khoản" type="text" class="form-control input-sm" > 
                              
                                     </div>
                                   </div>
@@ -44,10 +44,10 @@
                                 <div class="form-group">
                                   <div class="col-md-10">
                                     <label class="col-md-4 control-label" for=
-                                    "U_PASS">Password:</label>
+                                    "U_PASS">Mật khẩu:</label>
                                     
                                     <div class="col-md-8">
-                                     <input name="U_PASS" id="U_PASS" placeholder="Password" type="password" class="form-control input-sm">
+                                     <input name="U_PASS" id="U_PASS" placeholder="Mật khẩu" type="password" class="form-control input-sm">
                             
                                     </div>
                                   </div>
@@ -59,8 +59,8 @@
                                     "FIRSTNAME"> </label>
                                     
                                     <div class="col-md-8">
-                                    <button type="submit" id="modalLogin" name="modalLogin" class="btn btn-pup"><span class="glyphicon glyphicon-log-in "></span>   Login</button> 
-                                     <button class="btn btn-default" data-dismiss="modal" type="button">Close</button> 
+                                    <button type="submit" id="modalLogin" name="modalLogin" class="btn btn-pup"><span class="glyphicon glyphicon-log-in "></span>Đăng nhập</button> 
+                                     <button class="btn btn-default" data-dismiss="modal" type="button">Tắt</button> 
                                     </div>
                                   </div>
                                 </div>
@@ -83,18 +83,18 @@
                            <form  class="form-horizontal span6" action="customer/controller.php?action=add" onsubmit="return personalInfo();" name="personal" method="POST" enctype="multipart/form-data">
                                 <div class="panel panel-pup">
                                     <div class="panel-heading">
-                                       Customer Details
+                                       Thông tin khách hàng
                                     </div>
                                      <div class="panel-body">
                                       <input class="proid" type="hidden" name="proid" id="proid" value="">
                                       <div class="form-group">
                                         <div class="col-md-10">
                                           <label class="col-md-4 control-label" for=
-                                          "FNAME">First Name:</label>
+                                          "FNAME">Tên:</label>
                                           <!-- <input  id="CUSTOMERID" name="CUSTOMERID"  type="HIDDEN" value="<?php echo $res->AUTO; ?>">  -->
                                           <div class="col-md-8">
                                              <input class="form-control input-sm" id="FNAME" name="FNAME" placeholder=
-                                                "First Name" type="text" value="">
+                                                "Nhập tên" type="text" value="">
                                           </div>
                                         </div>
                                       </div>
@@ -102,11 +102,11 @@
                                       <div class="form-group">
                                         <div class="col-md-10">
                                           <label class="col-md-4 control-label" for=
-                                          "LNAME">Last Name:</label>
+                                          "LNAME">Họ:</label>
 
                                           <div class="col-md-8">
                                              <input class="form-control input-sm" id="LNAME" name="LNAME" placeholder=
-                                                "Last Name" type="text" value="">
+                                                "Họ" type="text" value="">
                                           </div>
                                         </div>
                                       </div>
@@ -114,13 +114,13 @@
                                        <div class="form-group">
                                         <div class="col-md-10">
                                           <label class="col-md-4 control-label" for=
-                                          "GENDER">Gender:</label>
+                                          "GENDER">Giới tính:</label>
 
                                           <div class="col-md-8">
                                             <input  id="GENDER" name="GENDER" placeholder=
-                                                "Gender" type="radio" checked="true" value="Male"><b> Male </b>
+                                                "Gender" type="radio" checked="true" value="Male"><b> Nam </b>
                                                 <input   id="GENDER" name="GENDER" placeholder=
-                                                "Gender" type="radio" value="Female"> <b> Female </b>
+                                                "Gender" type="radio" value="Female"> <b> Nữ </b>
                                           </div>
                                         </div>
                                       </div>
@@ -128,11 +128,11 @@
                                        <div class="form-group">
                                             <div class="col-md-10">
                                               <label class="col-md-4 control-label" for=
-                                              "CITYADD">Municipality/City:</label>
+                                              "CITYADD">Tỉnh/Thành Phố:</label>
 
                                               <div class="col-md-8">
                                                  <input class="form-control input-sm" id="CITYADD" name="CITYADD" placeholder=
-                                                    "Municipality/City Address" type="text" value="">
+                                                    "Tỉnh/Thành Phố" type="text" value="">
                                               </div>
                                             </div>
                                           </div>
@@ -141,11 +141,11 @@
                                       <div class="form-group">
                                         <div class="col-md-10">
                                           <label class="col-md-4 control-label" for=
-                                          "CUSUNAME">Username:</label>
+                                          "CUSUNAME">Tên tài khoản:</label>
 
                                           <div class="col-md-8">
                                              <input class="form-control input-sm" id="CUSUNAME" name="CUSUNAME" placeholder=
-                                                "Username" type="text" value="">
+                                                "Tên tài khoản" type="text" value="">
                                           </div>
                                         </div>
                                       </div> 
@@ -153,11 +153,11 @@
                                        <div class="form-group">
                                         <div class="col-md-10">
                                           <label class="col-md-4 control-label" for=
-                                          "CUSPASS">Password:</label>
+                                          "CUSPASS">Mật Khẩu:</label>
 
                                           <div class="col-md-8">
                                              <input class="form-control input-sm" id="CUSPASS" name="CUSPASS" placeholder=
-                                                "Password" type="password" value=""><span></span>
+                                                "Mật khẩu" type="password" value=""><span></span>
                                           </div>
                                         </div>
                                       </div>
@@ -168,8 +168,8 @@
                                           "PASS"></label>
 
                                           <div class="col-md-8">
-                                          <p>Note</p>
-                                            Password must be atleast 8 to 15 characters. Only letter, numeric digits, underscore and first character must be a letter.
+                                          <p>Chú Ý</p>
+                                            Mật khẩu phải ít nhất từ 8 đến 15 kí tự. Chỉ chữ cái, chữ số, dấu gạch dưới và ký tự đầu tiên phải là một chữ cái.
                                          </div> 
                                         </div>
                                       </div> 
@@ -177,11 +177,11 @@
                                       <div class="form-group">
                                         <div class="col-md-10">
                                           <label class="col-md-4 control-label" for=
-                                          "PHONE">Contact Number:</label>
+                                          "PHONE">Số điện thoại liên lạc:</label>
 
                                           <div class="col-md-8">
                                              <input class="form-control input-sm" id="PHONE" name="PHONE" placeholder=
-                                                "+63 0000000000" type="number" value="">
+                                                "+84 " type="number" value="">
                                           </div>
                                         </div>
                                       </div>
@@ -193,8 +193,8 @@
                                            <label class="col-md-4" align = "right"for=
                                           "image"></label>
                                           <div class="col-md-8">
-                                        <p>  I <input type="checkbox" id="conditionterms" name="conditionterms" value="checkbox" />
-                                           <small>Agree with the <a class="toggle-modal"  onclick=" OpenPopupCenter('terms.php','Terms And Codition','600','600')"  ><b>TERMS AND CONDITION</b></a> of NPIF Source Code.</small>
+                                        <p>  Tôi <input type="checkbox" id="conditionterms" name="conditionterms" value="checkbox" />
+                                           <small>Đồng ý <a class="toggle-modal"  onclick=" OpenPopupCenter('terms.php','Terms And Codition','600','600')"  ><b>TERMS AND CONDITION</b></a> of NPIF Source Code.</small>
                                            
                                           </div>
                                         </div>
@@ -207,7 +207,7 @@
                                           <div class="col-md-8">
                                             <input type="submit"  name="submit"  value="Sign Up"  class="submit btn btn-pup"  />
                                              <button class="btn btn-default" data-dismiss="modal" type=
-                                                "button">Close</button> 
+                                                "button">Tắt</button> 
                                           </div>
                                         </div>
                                       </div> 

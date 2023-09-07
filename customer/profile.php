@@ -18,8 +18,8 @@
     <div class="container">
          <div class="breadcrumbs">
         <ol class="breadcrumb">
-          <li><a href="#">Home</a></li>
-          <li class="active">Profile</li>
+          <li><a href="#">Trang Chủ</a></li>
+          <li class="active">Hồ sơ</li>
         </ol>
       </div>
         <div class="row">
@@ -34,11 +34,11 @@
             <ul class="list-group">
             <!-- <li class="list-group-item text-muted">Profile</li> -->
                 <li class="list-group-item text-right"><span class=
-                "pull-left"><strong>Real name</strong></span>
+                "pull-left"><strong>Họ tên</strong></span>
                 <?php echo $res->FNAME .' '.$res->LNAME; ?></li>
                 <li class="list-group-item text-right"> 
                 <div class="panel-group" id="accordion">   
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"  >Change Password</a>
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"  >Thay đổi mật khẩu</a>
                   <div id="collapseTwo" class="panel-collapse collapse">
                     <div class="panel-body">
                         <form action="<?php echo web_root; ?>customer/controller.php?action=changepassword" method="POST"> 
@@ -57,11 +57,11 @@
             <div class="panel-body">
                 <ul class="nav nav-tabs" id="myTab">
                     <li class="active">
-                        <a data-toggle="tab" href="#home">List of Orders</a>
+                        <a data-toggle="tab" href="#home">Danh sách hàng đặt</a>
                     </li> 
                     <li>
-                        <a data-toggle="tab" href="#settings">Update
-                        Account</a>
+                        <a data-toggle="tab" href="#settings">Cập nhật
+                        tài khoản</a>
                     </li>
                     <li>
                         <a data-toggle="tab" href="#wishlist">WishList</a>
@@ -83,12 +83,12 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Order#</th>
-                                            <th>Date Oredered</th>
-                                            <th>TotalPrice</th>
-                                            <th>PaymentMethod</th>
-                                            <th>Status</th>
-                                            <th width="150px">Remarks</th>
+                                            <th>Đặt Hàng#</th>
+                                            <th>Ngày Đặt Hàng</th>
+                                            <th>Tổng giá</th>
+                                            <th>Cách trả tiền</th>
+                                            <th>Tình trạng</th>
+                                            <th width="150px">Đánh giá</th>
                                             <th></th>
                                         </tr>
                                     </thead>
@@ -163,8 +163,8 @@
                 <div class="modal-header">
                     <button class="close" data-dismiss="modal" type=
                     "button">×</button>
-                    <h4 class="modal-title" id="myModalLabel">Choose
-                    Image.</h4>
+                    <h4 class="modal-title" id="myModalLabel">Chọn
+                    hình ảnh.</h4>
                 </div>
                 <form action="customer/controller.php?action=photos" enctype=
                 "multipart/form-data" method="post">

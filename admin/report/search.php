@@ -109,11 +109,11 @@ function tablePrint(){
     document_print.print();  
     document_print.document.close();  
     return false;  
-    } 
+    }
 	$(document).ready(function() {
 		oTable = jQuery('#list').dataTable({
 		"bJQueryUI": true,
 		"sPaginationType": "full_numbers"
 		} );
-	});		
+	})
 </script>

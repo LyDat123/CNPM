@@ -43,17 +43,17 @@ require_once("include/initialize.php");
                     <!-- <h3>Project Details</h3> -->
                     <ul>
                       <!-- <li>Model - <?php echo $cur->PROMODEL; ?></li> -->
-                      <li>Type - <?php echo $cur->PRODESC; ?></li>
-                      <li>Price - &#36 <?php echo $cur->PROPRICE; ?></li>
+                      <li>Loại - <?php echo $cur->PRODESC; ?></li>
+                      <li>Gía - &#36 <?php echo $cur->PROPRICE; ?></li>
                        <?php if($cur->PRODISCOUNT>0){ ?>
-                        <li>Discount - <?php echo $cur->PRODISCOUNT; ?> % </li> 
+                        <li>Giảm giá - <?php echo $cur->PRODISCOUNT; ?> % </li> 
 
-                        <li>Discounted Price - &#36 <?php echo $cur->PRODISPRICE; ?> </li> 
+                        <li>Gía được giảm - &#36 <?php echo $cur->PRODISPRICE; ?> </li> 
                         <?php } ?>
-                      <li>Available Quantity - <?php echo $cur->PROQTY; ?></li>
+                      <li>Số lượng hàng - <?php echo $cur->PROQTY; ?></li>
                     </ul> 
-                    <button class="btn btn-pup"  name="btnorder" type="Submit">Order Now!</button> 
-                    <button class="btn btn-default" id="btn_close" data-dismiss="modal" type="button">Close</button> 
+                    <button class="btn btn-pup"  name="btnorder" type="Submit">Đặt ngay!</button> 
+                    <button class="btn btn-default" id="btn_close" data-dismiss="modal" type="button">Tắt</button> 
 
                 </div>
               

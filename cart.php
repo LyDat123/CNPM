@@ -3,7 +3,7 @@
       <div class="breadcrumbs">
         <ol class="breadcrumb">
           <li><a href="#">Home</a></li>
-          <li class="active">Shopping Cart</li>
+          <li class="active">Giỏ hàng</li>
         </ol>
       </div>
       <div class="table-responsive cart_info"> 
@@ -18,11 +18,11 @@ check_message();
                          <table  class="table table-condensed" id="table" >
                          <thead> 
                           <tr class="cart_menu"> 
-                             <td  >Product</td>
-                             <td >Description</td>
-                             <td  width="15%" >Price</td>
-                             <td  width="15%" >Quantity</td> 
-                             <td  width="15%" >Total</td>  
+                             <td  >Sản phẩm</td>
+                             <td >Chi tiết sản phẩm</td>
+                             <td  width="15%" >Gía thành</td>
+                             <td  width="15%" >Số lượng</td> 
+                             <td  width="15%" >Tổng</td>  
                           </tr>
                          </thead>  
                           
@@ -101,14 +101,14 @@ check_message();
                                  }
                                }
                                }else{ 
-                                  echo "<h1>There is no item in the cart.</h1>";
+                                  echo "<h1>Giỏ hàng còn trống</h1>";
                                } 
                             ?>  
                                 
                       </table> 
 
      
-                        <h3 align="right"> Total  &#36<span id="sum">0</span></h3> 
+                        <h3 align="right"> Tổng:  &#36<span id="sum">0</span></h3> 
     </div>
   </div>  
  
@@ -116,14 +116,14 @@ check_message();
 <section id="do_action">
     <div class="container">
       <div class="heading">
-        <h3>What would you like to do next?</h3>
-        <p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery cost.</p>
+        <h3>Bạn muốn làm gì tiếp theo?</h3>
+        <p>Hãy chọn nếu bạn đã có mã giảm giá hoặc điểm thưởng bạn muốn dùng hoặc muốn ước tính chi phí giao hàng của bạn.</p>
       </div>
       <div class="row">
      <form action="index.php?q=orderdetails" method="post">
    <a href="index.php?q=product" class="btn btn-default check_out pull-left ">
    <i class="fa fa-arrow-left fa-fw"></i>
-   Add New Order
+   Thêm đơn hàng mới
    </a>
 
      <?php    
@@ -134,13 +134,13 @@ check_message();
                   if (isset($_SESSION['CUSID'])){  
                
                     echo '<button type="submit"  name="proceed" id="proceed" class="btn btn-default check_out btn-pup pull-right">
-                            Proceed And Checkout
+                            Tiến hành và thanh toán
                             <i class="fa  fa-arrow-right fa-fw"></i>
                             </button>';
                  
                    }else{
                      echo   '<a data-target="#smyModal" data-toggle="modal" class="btn btn-default check_out signup pull-right" href="">
-                              Proceed And Checkout
+                              Tiến hành và thanh toán
                               <i class="fa  fa-arrow-right fa-fw"></i>
                               </a>';
                   } 

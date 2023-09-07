@@ -46,15 +46,15 @@ $query = "SELECT * FROM `tblpromopro` pr , `tblproduct` p , `tblcategory` c
                 <p><?php echo   $result->CATEGORIES;?></p>
                 <!-- <h3>Project Details</h3> -->
                 <ul>
-                    <li>Model - <?php echo $result->PROMODEL; ?></li>
-                    <li>Type - <?php echo $result->PRODESC; ?></li>
-                    <li>Price - &#8369 <?php echo $result->PROPRICE; ?></li> 
-                    <li>Discount - <?php echo $result->PRODISCOUNT; ?> % </li> 
-                    <li>Discounted Price - &#8369 <?php echo $result->PRODISPRICE; ?> </li> 
-                    <li>Available Quantity - <?php echo $result->PROQTY; ?></li>
+                    <li>Kiểu Dạng - <?php echo $result->PROMODEL; ?></li>
+                    <li>Loại - <?php echo $result->PRODESC; ?></li>
+                    <li>Giá - &#8369 <?php echo $result->PROPRICE; ?></li> 
+                    <li>Giảm Gía - <?php echo $result->PRODISCOUNT; ?> % </li> 
+                    <li>Gía Được Giảm - &#8369 <?php echo $result->PRODISPRICE; ?> </li> 
+                    <li>Số lượng Hàng - <?php echo $result->PROQTY; ?></li>
                 </ul>
 
-                 <button  type="submit"  class="btn btn-primary btn-sm"  name="btnorder">Order Now!</button>
+                 <button  type="submit"  class="btn btn-primary btn-sm"  name="btnorder">Đặt Ngay!</button>
             </div>
     
         </div>

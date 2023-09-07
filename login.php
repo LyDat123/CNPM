@@ -16,7 +16,7 @@ if(isset($_POST['sidebarLogin'])){
   
    if ($email == '' OR $upass == '') {
 
-      message("Invalid Username and Password!", "error");
+      message("Tên người dùng và mật khẩu không hợp lệ!", "error");
       redirect(web_root."index.php");
          
     } else {   
@@ -28,7 +28,7 @@ if(isset($_POST['sidebarLogin'])){
 
            redirect(web_root."index.php?q=profile");
         }else{
-             message("Invalid Username and Password! Please contact administrator", "error");
+             message("Tên người dùng và mật khẩu không hợp lệ! Vui lòng liên hệ với quản trị viên", "error");
              redirect(web_root."index.php");
         }
  
@@ -43,7 +43,7 @@ if(isset($_POST['sidebarLogin'])){
   $h_upass = sha1($upass);
   
    if ($email == '' OR $upass == '') { 
-      message("Invalid Username and Password!", "error");
+      message("Tên người dùng và mật khẩu không hợp lệ!", "error");
        redirect(web_root."index.php?page=6");
          
     } else {   
@@ -64,7 +64,7 @@ if(isset($_POST['sidebarLogin'])){
 
          
         }else{
-             message("Invalid Username and Password! Please contact administrator", "error");
+             message("Tên người dùng và mật khẩu không hợp lệ! Vui lòng liên hệ với quản trị viên", "error");
              redirect(web_root."index.php");
         }
  

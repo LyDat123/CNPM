@@ -64,19 +64,19 @@ if (isset($_POST['updateid'])){
         <div class="panel panel-default">
           <div class="panel-body">  
             <fieldset>  
-              <legend><h2 class="text-left">Cart List</h2></legend>
-          <div>Every products has a mininum price of &#8369 50.00 each to be able to order.</div>
+              <legend><h2 class="text-left">Danh Sách Giỏ Hàng</h2></legend>
+          <div>Mỗi sản phẩm có giá tối thiểu là &#8369 50,00 mới có thể đặt hàng</div>
       <div class="table-responsive">
        <div  class="fixnmix_scroll_carttwo" >
           <table  class="table fixnmix-table" id="table" >
              <thead>
                <tr>
                   <th width="5px">#</th>
-                  <th>Product</th>
-                  <th>Description</th>
-                  <th>Price</th>
-                  <th>Quantity</th>
-                  <th>Total</th>
+                  <th>Sản Phẩm</th>
+                  <th>Mô Tả Sản Phẩm</th>
+                  <th>Gía Thành</th>
+                  <th>Số Lượng</th>
+                  <th>Tổng</th>
                   <th>Action</th>
                </tr>
              </thead>  
@@ -112,7 +112,7 @@ if (isset($_POST['updateid'])){
                          <input type="hidden" name="originalqty<?php echo $result->PRODUCTID;  ?>" id="originalqty<?php echo $result->PRODUCTID; ?>"  value="<?php echo  $result->QTY ?>"/></td>
 
                         <!-- end -->
-                        <td>   <a href="cart/controller.php?action=delete&id=<?php echo $result->PRODUCTID; ?>"  data-id="<?php echo $result->PRODUCTID ?>"   class="delete btn btn-danger btn-xs">Remove</a></td> 
+                        <td>   <a href="cart/controller.php?action=delete&id=<?php echo $result->PRODUCTID; ?>"  data-id="<?php echo $result->PRODUCTID ?>"   class="delete btn btn-danger btn-xs">Xóa</a></td> 
                       </tr>
             <?php
               }
@@ -128,7 +128,7 @@ if (isset($_POST['updateid'])){
                   </div>
                   <table  >
                   <tfoot >
-                     <strong><h1 align="right">Total Price : &#8369 <span style="margin-right:3%"  id="sum">0.00</span></h1></strong></td>
+                     <strong><h1 align="right">Gía Tổng : &#8369 <span style="margin-right:3%"  id="sum">0.00</span></h1></strong></td>
          
                   </tfoot>
                   </table> 
@@ -182,14 +182,14 @@ if (isset($_POST['updateid'])){
                   <button class="close" data-dismiss="modal" type=
                   "button">×</button>
 
-                  <h4 class="modal-title" id="myModalLabel">Have already an account?</h4>
+                  <h4 class="modal-title" id="myModalLabel">Đã có tài khoản?</h4>
                 </div>
  
                   <div class="modal-body" > 
 
                 <ul class="nav nav-tabs" id="myTab">
-                  <li class="active"><a href="#home" data-toggle="tab">Login</a></li> 
-                  <li><a href="#settings" data-toggle="tab">Register</a></li>
+                  <li class="active"><a href="#home" data-toggle="tab">Đăng Nhập</a></li> 
+                  <li><a href="#settings" data-toggle="tab">Đăng Ký</a></li>
                 </ul>
                     <!-- <h2>Login</h2> -->
                     <div class="tab-content"> 
@@ -198,20 +198,20 @@ if (isset($_POST['updateid'])){
                           <div class="modal-body">
                               <div class="col-md-12">
                               <div class="form-group"> 
-                              <label for="first_name">Username</label>
+                              <label for="first_name">Tên Tài Khoản</label>
                               <input   id="user_email" name="user_email" placeholder="Username" type="text" class="form-control input-sm" > 
                               </div>
                               <div class="form-group"> 
-                              <label for="first_name">Password</label>
+                              <label for="first_name">Mật Khẩu</label>
                               <input name="user_pass2" id="user_pass2" placeholder="Password" type="password" class="form-control">
                               </div>
                               </div>
                               <div class="modal-footer">
-                              <p align="left">&copy; Fix N Mix Ordering System</p>
+                              <p align="left">&copy; NPIF Shop</p>
                               <button class="btn btn-default"   data-dismiss="modal" type=
-                              "button">Close</button>  
+                              "button">Tắt</button>  
                               <button class="btn btn_fixnmix"
-                              name="MbtnLogin" type="submit">Sign In</button>
+                              name="MbtnLogin" type="submit">Đăng Nhập</button>
                             </div>
                             
                           </div>
@@ -233,11 +233,11 @@ if (isset($_POST['updateid'])){
                 <div class="form-group">
                     <div class="col-md-10">
                       <label class="col-md-4 control-label" for=
-                      "FIRSTNAME">First Name:</label>
+                      "FIRSTNAME">Tên:</label>
                       <input  id="CUSTOMERID" name="CUSTOMERID"  type="HIDDEN" value="<?php echo $res->AUTO; ?>"> 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="FIRSTNAME" name="FIRSTNAME" placeholder=
-                            "First Name" type="text" value="">
+                            "Tên" type="text" value="">
                       </div>
                     </div>
                   </div>
@@ -245,27 +245,27 @@ if (isset($_POST['updateid'])){
                   <div class="form-group">
                     <div class="col-md-10">
                       <label class="col-md-4 control-label" for=
-                      "LASTNAME">Last Name:</label>
+                      "LASTNAME">Họ:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="LASTNAME" name="LASTNAME" placeholder=
-                            "Last Name" type="text" value="">
+                            "Họ" type="text" value="">
                       </div>
                     </div>
                   </div>
 
                   
                 <div class="panel panel-default">
-                <div class="panel-head" style="margin-left:3%"><h3>address</h3></div>
+                <div class="panel-head" style="margin-left:3%"><h3>địa chỉ</h3></div>
                     <div class="panel-body">
                       <div class="form-group">
                         <div class="col-md-10">
                           <label class="col-md-4 control-label" for=
-                          "HOMENUMBER">Home Number:</label>
+                          "HOMENUMBER">Số liên lạc:</label>
 
                           <div class="col-md-8">
                              <input class="form-control input-sm" id="HOMENUMBER" name="HOMENUMBER" placeholder=
-                                "Home Number" type="text" value="">
+                                "Số liên lạc" type="text" value="">
                           </div>
                         </div>
                       </div>
@@ -273,11 +273,11 @@ if (isset($_POST['updateid'])){
                        <div class="form-group">
                         <div class="col-md-10">
                           <label class="col-md-4 control-label" for=
-                          "STREET">Street / Village :</label>
+                          "STREET">Địa Chỉ :</label>
 
                           <div class="col-md-8">
                              <input class="form-control input-sm" id="STREET" name="STREET" placeholder=
-                                "Street" type="text" value="">
+                                "Địa Chỉ" type="text" value="">
                           </div>
                         </div>
                       </div>
@@ -287,22 +287,22 @@ if (isset($_POST['updateid'])){
 
 
                           <label class="col-md-4 control-label" for=
-                          "BARANGGY">Barangay:</label>
+                          "BARANGGY">Tỉnh:</label>
 
                           <div class="col-md-8">
                              <input class="form-control input-sm" id="BARANGGY" name="BARANGGY" placeholder=
-                                "Barangay" type="text" value="">
+                                "Tỉnh" type="text" value="">
                           </div>
                         </div>
                       </div>
                        <div class="form-group">
                         <div class="col-md-10">
                           <label class="col-md-4 control-label" for=
-                          "CITYADDRESS">City:</label>
+                          "CITYADDRESS">Thành Phố:</label>
 
                           <div class="col-md-8">
                              <input class="form-control input-sm" id="CITYADDRESS" name="CITYADDRESS" placeholder=
-                                "City Address" type="text" value="">
+                                "Thành Phố" type="text" value="">
                           </div>
                         </div>
                       </div>
@@ -325,7 +325,7 @@ if (isset($_POST['updateid'])){
                   <div class="form-group">
                     <div class="col-md-10">
                       <label class="col-md-4 control-label" for=
-                      "USERNAME">Username:</label>
+                      "USERNAME">Tên Tài Khoản:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="USERNAME" name="USERNAME" placeholder=
@@ -337,7 +337,7 @@ if (isset($_POST['updateid'])){
                    <div class="form-group">
                     <div class="col-md-10">
                       <label class="col-md-4 control-label" for=
-                      "PASS">Password:</label>
+                      "PASS">Mật Khẩu:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="PASS" name="PASS" placeholder=
@@ -352,8 +352,8 @@ if (isset($_POST['updateid'])){
                       "PASS"></label>
 
                       <div class="col-md-8">
-                      <p>Note</p>
-                        Password must be atleast 8 to 15 characters. Only letter, numeric digits, underscore and first character must be a letter.
+                      <p>Chú Ý</p>
+                        Mật khẩu phải có ít nhất 8 đến 15 ký tự. Chỉ chữ cái, chữ số, dấu gạch dưới và ký tự đầu tiên phải là một chữ cái.
                       </div> 
                     </div>
                   </div>

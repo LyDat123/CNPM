@@ -13,7 +13,7 @@ check_message();
             <div class="col-md-12">
                 <div class="panel panel-default panel-shadow">
                     <div class="panel-heading panel-fixnmix" > 
-                        <h1> Cart List </h1>     
+                        <h1> Danh Sách Giỏ Hàng </h1>     
                     </div>
                     <div class="panel-body">                 
                     <div class="table-responsive">
@@ -21,11 +21,11 @@ check_message();
                          <thead>
                            <tr>
                              <td>
-                             <div class="culomn4"><div style="float: left; width:90px">Product</div></div>
-                             <div class="culomn4"><div style="float: left; width:250px">Description</div></div>
-                             <div class="culomn4"><div style="float: left; width:200px">Quantity</div></div>
-                             <div class="culomn4"><div style="float: left; width:110px">Price</div></div>
-                             <div class="culomn4"><div style="float: left; width:50px">Total</div></div>
+                             <div class="culomn4"><div style="float: left; width:90px">Sản Phẩm</div></div>
+                             <div class="culomn4"><div style="float: left; width:250px">Chi Tiết Sản Phẩm</div></div>
+                             <div class="culomn4"><div style="float: left; width:200px">Số Lượng</div></div>
+                             <div class="culomn4"><div style="float: left; width:110px">Gía Thành</div></div>
+                             <div class="culomn4"><div style="float: left; width:50px">Tổng</div></div>
                              </td>
                            </tr>
                          </thead>                     
@@ -108,8 +108,8 @@ check_message();
                                         <input type="hidden" id="TOT" name="TOT<?php echo $result->PRODUCTID ?>" value="<?php echo $_SESSION['fixnmix_cart'][$i]['price']; ?>" />
 
                                         <!-- END -->
-                                        <a href="cart/controller.php?action=delete&id=<?php echo $result->PRODUCTID; ?>" class="btn btn-link"   >Remove</a> 
-                                        <button type="submit" name="update" class="btn btn-link" >Update</button>                                     
+                                        <a href="cart/controller.php?action=delete&id=<?php echo $result->PRODUCTID; ?>" class="btn btn-link"   >Xóa</a> 
+                                        <button type="submit" name="update" class="btn btn-link" >Cập Nhật</button>                                     
                                      </div> 
 
                                     <!-- <div style="float: right; width:100px"></div> -->
@@ -132,7 +132,7 @@ check_message();
                             </tr>
                             <tr >  
                             <td>                               
-                             <div class="culomn4"><div style="float: right;"><h1> Total Price : &#8369<span id="sum">0</span></h1></div></div>
+                             <div class="culomn4"><div style="float: right;"><h1> Tổng Gía : &#8369<span id="sum">0</span></h1></div></div>
                             </td>                        
                               
                             </tr>
@@ -144,8 +144,8 @@ check_message();
               
                 </div>
                 </div>               
-                <a href="index.php?page=2" class="btn btn-default pull-left"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<strong>Add New Order</strong></a>
-                <a href="index.php?page=7" name="proceed"  class="btn btn_fixnmix pull-right"   ><strong>Proceed And Checkout</strong> <span class="glyphicon glyphicon-chevron-right"></span></a> 
+                <a href="index.php?page=2" class="btn btn-default pull-left"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<strong>Thêm Đơn Hàng Mới</strong></a>
+                <a href="index.php?page=7" name="proceed"  class="btn btn_fixnmix pull-right"   ><strong>Tiếp Tục Và Thanh Toán</strong> <span class="glyphicon glyphicon-chevron-right"></span></a> 
                 
             </div>
         </div>

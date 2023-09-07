@@ -170,6 +170,10 @@ $singleuser = $user->single_user($_SESSION['USERID']);
                             <a href="<?php echo web_root; ?>admin/report/index.php" ><i class="fa  fa-file-text fa-fw"></i> Report </a>
                           
                         </li>
+                        <li>
+                            <a href="<?php echo web_root; ?>admin/uploads/index.php" ><i class="fa  fa-file-text fa-fw"></i> uploads </a>
+                          
+                        </li>
                  <?php }  ?>
  
  

@@ -1,0 +1,63 @@
+/* Upload lên web*/
+
+/* Định dạng phần tựa đề */
+.card-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Định dạng nút Tải lên và nút Tải lên đã chỉnh sửa */
+.btn-primary,
+.btn-success {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Định dạng container chứa bảng */
+#csvContainer {
+    margin-top: 20px;
+}
+
+/* Định dạng bảng */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Định dạng ô có thể chỉnh sửa */
+td[contenteditable="true"] {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+/* Định dạng ô được chọn */
+td.selected {
+    background-color: #a0c2e8;
+}
+
+/* Định dạng nút Xóa hàng và nút Xóa cột */
+#deleteRow,
+#deleteColumn {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+}
+
+/* Định dạng nút Xóa hàng */
+#deleteRow {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Định dạng nút Xóa cột */
+#deleteColumn {
+    background-color: #ff9800;
+    color: white;
+}

@@ -13,14 +13,14 @@
 
             <div class="row">
          <div class="col-lg-12">
-            <h1 class="page-header">Update Autonumber</h1>
+            <h1 class="page-header">Cập Nhật Autonumber</h1>
           </div>
           <!-- /.col-lg-12 -->
        </div> 
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "AUTOSTART">Start:</label>
+                      "AUTOSTART">Bắt Đầu:</label>
 
                       <div class="col-md-8">
                       <input  type="hidden" name="AUTOKEY" id="AUTOKEY" value="<?php  echo $singleauto->AUTOKEY; ?>">
@@ -45,7 +45,7 @@
                    <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "AUTOEND">End:</label>
+                      "AUTOEND">Kết Thúc:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="AUTOEND" name="AUTOEND" placeholder=

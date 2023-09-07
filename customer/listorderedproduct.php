@@ -87,11 +87,11 @@ $query = "SELECT * FROM `tblsummary` s ,`tblcustomer` c
 			 
 		
 ?>
- 	 <h4>Your order has been confirmed and ready for Pick Up</h4><br/>
-		<h5>DEAR Ma'am/Sir ,</h5>
-		<h5>As you have ordered cash on pick up, please have the exact amount of cash to pay to our staff and bring this billing details.</h5>
+ 	 <h4>Đơn hàng của bạn đã được xác nhận và sẵn sàng để nhận</h4><br/>
+		<h5>Kính gửi khách hàng,</h5>
+		<h5>Vì bạn đã đặt hàng bằng tiền mặt khi nhận hàng, vui lòng cung cấp số tiền mặt chính xác để thanh toán cho nhân viên của chúng tôi và mang theo chi tiết thanh toán này.</h5>
 		 <hr/>
-		 <h4><strong>Pick up Information</strong></h4>
+		 <h4><strong>Thông tin nhận hàng</strong></h4>
 		 <div class="row">
 		 	<!-- <div class="col-md-6">
 		 		<p> ORDER NUMBER : <?php echo $_SESSION['ordernumber']; ?></p>

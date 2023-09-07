@@ -28,8 +28,8 @@
           
          
             <!-- <li class="list-group-item text-muted">Profile</li> -->
-             <li class="list-group-item text-right"><span class="pull-left"><strong>Real name</strong></span> <?php echo $singlecustomer->FNAME .' '.$singlecustomer->LNAME; ?> </li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Joined</strong></span><?php echo date_format(date_create($singlecustomer->DATEJOIN),'M. d, y');?></li>
+             <li class="list-group-item text-right"><span class="pull-left"><strong>Họ tên</strong></span> <?php echo $singlecustomer->FNAME .' '.$singlecustomer->LNAME; ?> </li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Tham gia</strong></span><?php echo date_format(date_create($singlecustomer->DATEJOIN),'M. d, y');?></li>
             <!-- <li class="list-group-item text-right"><span class="pull-left"><strong>Last seen</strong></span> Yesterday</li> -->
            
             
@@ -43,7 +43,7 @@
 
 <div class="panel">  
 <div class="panel-header">
-  <h2>Tracking Order <SMALL><a href="<?php echo web_root; ?>index.php?q=profile" class="btn btn-sm btn-primary"><i class="fa  fa-chevron-left"></i> Back</a></SMALL></h2>
+  <h2>2Theo dõi đặt hang<SMALL><a href="<?php echo web_root; ?>index.php?q=profile" class="btn btn-sm btn-primary"><i class="fa  fa-chevron-left"></i> Back</a></SMALL></h2>
 </div>          
   <div class="panel-body">
 
@@ -53,11 +53,11 @@
                     <table id="" class="table"  style="font-size:12px" cellspacing="0"  > 
                       <thead>
                         <tr> 
-                          <th align="center">Processing</th>
+                          <th align="center">Đang xử lý</th>
                           <th></th>  
-                          <th>Shipping</th>  
+                          <th>Đang giao hàng</th>  
                            <th></th> 
-                          <th >Delivered</th> 
+                          <th >Đã giao hàng</th> 
                         </tr> 
                       </thead>   
                     <tbody>
@@ -137,7 +137,7 @@
                   <button class="close" data-dismiss="modal" type=
                   "button">×</button>
 
-                  <h4 class="modal-title" id="myModalLabel">Choose Image.</h4>
+                  <h4 class="modal-title" id="myModalLabel">Chọn hình ảnh.</h4>
                 </div>
 
                 <form action="customer/controller.php?action=photos" enctype="multipart/form-data" method=
@@ -163,8 +163,8 @@
 
                   <div class="modal-footer">
                     <button class="btn btn-default" data-dismiss="modal" type=
-                    "button">Close</button> <button class="btn btn-primary"
-                    name="savephoto" type="submit">Upload Photo</button>
+                    "button">Tắt</button> <button class="btn btn-primary"
+                    name="savephoto" type="submit">Đăng hình ảnh</button>
                   </div>
                 </form>
               </div><!-- /.modal-content -->

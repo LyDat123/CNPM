@@ -3,7 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 28, 2023 lúc 02:37 PM
+-- Thời gian đã tạo: Th8 13, 2023 lúc 11:00 AM
+
+
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.2.4
 
@@ -156,8 +158,8 @@ CREATE TABLE `tblautonumber` (
 --
 
 INSERT INTO `tblautonumber` (`ID`, `AUTOSTART`, `AUTOINC`, `AUTOEND`, `AUTOKEY`, `AUTONUM`) VALUES
-(1, '2017', 1, 50, 'PROID', 10),
-(2, '0', 1, 98, 'ordernumber', 0);
+(1, '2017', 1, 107, 'PROID', 10),
+(2, '0', 1, 101, 'ordernumber', 0);
 
 -- --------------------------------------------------------
 
@@ -178,14 +180,10 @@ CREATE TABLE `tblcategory` (
 INSERT INTO `tblcategory` (`CATEGID`, `CATEGORIES`, `USERID`) VALUES
 (5, 'SHOES', 0),
 (11, 'BAGS', 0),
-(12, 'CLOTHING', 0),
-(13, 'INTERIORS', 0),
-(14, 'HOUSEHOLDS', 0),
-(15, 'FASHION', 0),
-(16, 'KIDS', 0),
 (17, 'WOMENS', 0),
 (18, 'MENS', 0),
-(19, 'SPORTSWEAR', 0);
+(19, 'SPORTSWEAR', 0),
+(24, 'COUPLE', 0);
 
 -- --------------------------------------------------------
 
@@ -232,7 +230,9 @@ INSERT INTO `tblcustomer` (`CUSTOMERID`, `FNAME`, `LNAME`, `MNAME`, `CUSHOMENUM`
 (9, 'Annie', 'Paredes', '', '', '', '', 's', '', '', '0000-00-00', 'Female', '12312312', '', 0, 'an', 'aa46142b604e671794a84129896d4dec508dec81', 'customer_image/shirt2.jpg', 1, '2019-08-20'),
 (10, 'zoha', 'gul', '', '', '', '', 'khi', '', '', '0000-00-00', 'Male', '92111111', '', 0, 'zoha', 'eb9bd013134064c3e2f6d1d164d98a5d465dbc8f', '', 1, '2022-08-15'),
 (11, 'zoha', 'gula', '', '', '', '', 'khi', '', '', '0000-00-00', 'Male', '48029384209', '', 0, 'zoha', 'bbdbf707cbe1520ae147fd95ffd9455a76e17784', 'customer_image/recommend3.jpg', 1, '2022-08-16'),
-(12, 'john', 'elia', '', '', '', '', 'khi', '', '', '0000-00-00', 'Male', '633902830', '', 0, 'johnelia', '8f48819108e2a452a470cd699bd2942146276fd7', 'customer_image/iframe3.png', 1, '2022-08-17');
+(12, 'john', 'elia', '', '', '', '', 'khi', '', '', '0000-00-00', 'Male', '633902830', '', 0, 'johnelia', '8f48819108e2a452a470cd699bd2942146276fd7', 'customer_image/iframe3.png', 1, '2022-08-17'),
+(13, 'UsNPIF', 'NPIF', '', '', '', '', 'Tp.HCM', '', '', '0000-00-00', 'Male', '11122334455', '', 0, 'NPIF', '210da5fd964b4ced7cf5373c30ae920c283d01b2', '', 1, '2023-08-03'),
+(14, 'Thanh', 'Tran', '', '', '', '', 'Tp.HCM', '', '', '0000-00-00', 'Male', '1234567890', '', 0, 'ThanhTr', '89ed4c93045edf3a40520b7109d547503293c40c', '', 1, '2023-08-12');
 
 -- --------------------------------------------------------
 
@@ -261,7 +261,10 @@ INSERT INTO `tblorder` (`ORDERID`, `PROID`, `ORDEREDQTY`, `ORDEREDPRICE`, `ORDER
 (5, 201737, 1, 119, 96, 0),
 (6, 201739, 1, 289, 96, 0),
 (7, 201737, 1, 119, 97, 0),
-(8, 201739, 1, 289, 97, 0);
+(8, 201739, 1, 289, 97, 0),
+(9, 201737, 2, 238, 98, 0),
+(10, 201737, 1, 119, 99, 0),
+(11, 2017105, 1, 200, 100, 0);
 
 -- --------------------------------------------------------
 
@@ -288,13 +291,57 @@ CREATE TABLE `tblproduct` (
 --
 
 INSERT INTO `tblproduct` (`PROID`, `PRODESC`, `INGREDIENTS`, `PROQTY`, `ORIGINALPRICE`, `PROPRICE`, `CATEGID`, `IMAGES`, `PROSTATS`, `OWNERNAME`, `OWNERPHONE`) VALUES
-(201737, 'KILY Korean Casual Sleeveless Dress Printed Dress 5a0019                      ', '', 3, 100, 119, 12, 'uploaded_photos/korean.jpeg', 'Available', 'janobe', ''),
-(201738, 'terno top and pants korean fashion boho terno summer terno for women  ', '', 3, 150, 199, 12, 'uploaded_photos/terno.jpg', 'Available', 'janobe', ''),
-(201739, '4Color Menâ€²S Denim Pants STRETCHABLE Skinny Black/Blue', '', 3, 250, 289, 18, 'uploaded_photos/jeans.jpg', 'Available', 'janobe', ''),
-(201740, 'SIMPLE Fashion Men`S Casual T Shirt Short Sleeve Round neck Top', '', 0, 100, 149, 18, 'uploaded_photos/shirt.jpg', 'Available', 'janobe', ''),
-(201741, 'ICM #T146 BESTSELLER TOPS TSHIRT FOR MEN', '', 4, 50, 89, 18, 'uploaded_photos/shirt2.jpg', 'Available', 'janobe', ''),
-(201742, 'CJY-001 Coat Rack Creative Simple CoatRack Bedroom Wardrobe (Gray)', '', 4, 250, 287, 14, 'uploaded_photos/bed.jpeg', 'Available', 'janobe', ''),
-(201749, 'best kids toys play and learn.', '', 200, 199, 189, 16, 'uploaded_photos/kid3.webp', 'Available', 'Kids Expert', '63223489022');
+(201752, 'Áo polo nam ', '', 100, 169, 169, 18, 'uploaded_photos/ao plo.png', 'Available', 'Áo Polo ', '445454542'),
+(201753, 'B? áo qu?n polo nam', '', 100, 250, 250, 0, 'uploaded_photos/full polo.png', 'Available', 'B? áo qu?n polo nam', '15141541'),
+(201756, 'Do bo Polo nam ', '', 100, 250, 250, 18, 'uploaded_photos/full polo.png', 'Available', 'Do bo Polo nam ', '884847'),
+(201757, 'Do bo nam hoa tiet Gucci', '', 100, 250, 250, 18, 'uploaded_photos/full gucci.png', 'Available', 'Do bo nam hoa tiet Gucci', '1441141'),
+(201758, 'Do bo nam hoa tiet NY', '', 100, 250, 250, 18, 'uploaded_photos/full NY.png', 'Available', 'Do bo nam hoa tiet NY', '8488984'),
+(201759, 'Do bo hoa tiet gau Panda cute', '', 100, 250, 250, 18, 'uploaded_photos/full panda.png', 'Available', 'Do bo hoa tiet gau Panda cute', '78498498'),
+(201760, 'Do bo nam dai', '', 100, 270, 270, 18, 'uploaded_photos/full dai.png', 'Available', 'Do bo nam dai', '48949849'),
+(201762, 'Ao so mi nam ', '', 2, 280, 280, 18, 'uploaded_photos/somi1.png', 'Available', 'Ao so mi nam ', '498498'),
+(201763, 'Quan Baggy nam', '', 100, 250, 250, 18, 'uploaded_photos/baggy.png', 'Available', 'Quan Baggy nam', '1984522'),
+(201764, 'Quan tay xanh ', '', 11, 300, 300, 18, 'uploaded_photos/quan tay1.png', 'Available', 'Quan tay xanh ', '9841'),
+(201765, 'Ao so mi cap doi xanh reu', '', 100, 420, 420, 24, 'uploaded_photos/Somi doi 1.png', 'Available', 'Ao so mi cap doi xanh reu', '891498'),
+(201766, 'Ao so mi cap doi trang sua', '', 100, 420, 420, 24, 'uploaded_photos/somi doi 2.png', 'Available', 'Ao so mi cap doi trang sua', '98415'),
+(201767, 'Ao so mi cap doi nau', '', 100, 420, 420, 18, 'uploaded_photos/somi doi 3.png', 'Available', 'Ao so mi cap doi nau', '98716'),
+(201769, 'Ao thun doi hoa tiet de thuong', '', 100, 300, 300, 24, 'uploaded_photos/ao doi 5.png', 'Available', 'Ao thun doi hoa tiet de thuong', '4894961165'),
+(201770, 'Ao thun doi hoa tiet trai tim', '', 56, 300, 300, 24, 'uploaded_photos/ao doi 4.png', 'Available', 'Ao thun doi hoa tiet trai tim', '651516'),
+(201771, 'Ao thun doi hoa tiet trai tim', '', 32, 300, 300, 24, 'uploaded_photos/AO THUN DOI.png', 'Available', 'Ao thun doi hoa tiet trai tim', '89484968496'),
+(201772, 'Ao thun doi hoa tiet trai tim', '', 65, 300, 300, 24, 'uploaded_photos/AO THUN DOI1.png', 'Available', 'Ao thun doi hoa tiet trai tim', '8498496'),
+(201773, 'Ao so mi doi Han Quoc', '', 10, 450, 450, 24, 'uploaded_photos/somi han quo.png', 'Available', 'Ao so mi doi Han Quoc', '586'),
+(201774, 'Ao len doi', '', 32, 500, 500, 24, 'uploaded_photos/len doi.png', 'Available', 'Ao len doi ', '61855'),
+(201775, 'Ao thun nu Han Quoc', '', 65, 150, 150, 17, 'uploaded_photos/ao nu 1.png', 'Available', 'Ao thun nu Han Quoc', '4658645'),
+(201776, 'Ao thun doi gau dau', '', 58, 350, 350, 24, 'uploaded_photos/doi gau dau.png', 'Available', 'Ao thun doi gau dau', '98415'),
+(201777, 'Ao thun nu', '', 21, 200, 200, 17, 'uploaded_photos/ao thun nu.png', 'Available', 'Ao thun nu', '96415615'),
+(201778, 'Ao thun nu hong', '', 46, 160, 160, 17, 'uploaded_photos/ao hong.png', 'Available', 'Ao thun nu hong', '898496'),
+(201779, 'Dam tay phong', '', 56, 320, 320, 17, 'uploaded_photos/DAM NU.png', 'Available', 'Dam tay phong', '9848496'),
+(201780, 'Dam co bup be', '', 6, 360, 360, 17, 'uploaded_photos/dam bup be.png', 'Available', 'Dam co bup be', '685685'),
+(201781, 'Dam nu co khoa keo', '', 42, 320, 320, 17, 'uploaded_photos/dam nu khoa keo.png', 'Available', 'Dam nu co khoa keo', '6484'),
+(201782, 'Giay Canvas co cao', '', 12, 500, 500, 5, 'uploaded_photos/giay Canvas .png', 'Available', 'Giay Canvas co cao', '8498496'),
+(201783, 'Giay phong cach Hongkong', '', 45, 551, 551, 5, 'uploaded_photos/giay hongkong.png', 'Available', 'Giay phong cach Hongkong', '8686'),
+(201784, 'Giay de cao', '', 3, 620, 620, 5, 'uploaded_photos/Giay de cao.png', 'Available', 'Giay de cao', '566565'),
+(201785, 'Giay the thao Unisex', '', 2, 600, 600, 5, 'uploaded_photos/giay the thao unisex.png', 'Available', 'Giay the thao Unisex', '656895'),
+(201786, 'Giay the thao nam', '', 3, 720, 720, 5, 'uploaded_photos/giay the thao nam.png', 'Available', 'Giay the thao nam', '6685'),
+(201787, 'Giay da Chelsea Boots', '', 54, 1500, 1500, 5, 'uploaded_photos/da chelsea boots.png', 'Available', 'Giay da Chelsea Boots', '9848'),
+(201788, 'Tui deo cheo Unisex', '', 31, 250, 250, 11, 'uploaded_photos/tui deo cheo unisex.png', 'Available', 'Tui deo cheo Unisex', '15684'),
+(201789, 'Tui da nang nu', '', 45, 510, 510, 11, 'uploaded_photos/tui da nang nu.png', 'Available', 'Tui da nang nu', '867543'),
+(201790, 'Tui deo  cho sinh vien', '', 21, 250, 250, 11, 'uploaded_photos/tui sinh vien.png', 'Available', 'Tui deo  cho sinh vien', '89653'),
+(201791, 'Tui canvas', '', 78, 300, 300, 11, 'uploaded_photos/tui canvas.png', 'Available', 'Tui canvas', '5684'),
+(201792, 'Tui hoa tiet SaiGon', '', 4, 230, 230, 11, 'uploaded_photos/tui hoa tiet Saigon.png', 'Available', 'Tui hoa tiet SaiGon', '1234567'),
+(201793, 'Tui deo cheo nam', '', 4, 409, 409, 11, 'uploaded_photos/tui deo cheo nam.png', 'Available', 'Tui deo cheo nam', '568535'),
+(201794, 'Tui deo di hoc & di choi', '', 54, 320, 320, 11, 'uploaded_photos/tui di hoc di choi.png', 'Available', 'Tui deo di hoc & di choi', '85546'),
+(201795, 'Balo chong nuoc', '', 21, 540, 540, 11, 'uploaded_photos/balo chong nuoc.png', 'Available', 'Balo chong nuoc', '789654578'),
+(201796, 'Balo di hoc', '', 38, 350, 350, 11, 'uploaded_photos/balo di hoc.png', 'Available', 'Balo di hoc', '58888888'),
+(201797, 'Set bo 3 mon tap the duc nam', '', 89, 360, 360, 19, 'uploaded_photos/set 3 mon tap the duc nam.png', 'Available', 'Set bo 3 mon tap the duc nam', '45789654'),
+(201798, 'Set bo 5 mon tap the duc nam', '', 78, 560, 560, 19, 'uploaded_photos/set 5 mon tap the duc nam.png', 'Available', 'Set bo 5 mon tap the duc nam', '6586569'),
+(201799, 'Ao tap Gym', '', 645, 160, 160, 19, 'uploaded_photos/ao tap gym.png', 'Available', 'Ao tap Gym', '848464816'),
+(2017100, 'Bo tap Gym nu', '', 65, 150, 150, 19, 'uploaded_photos/bo tap gym nu.png', 'Available', 'Bo tap Gym nu', '0987654'),
+(2017101, 'Bo tap Gym den ', '', 54, 200, 200, 19, 'uploaded_photos/do tap gym den.png', 'Available', 'Bo tap Gym den ', '45454'),
+(2017102, 'Bra tap Gym', '', 54, 60, 60, 19, 'uploaded_photos/bra tap gym.png', 'Available', 'Bra tap Gym', '6564'),
+(2017103, 'Do tap the duc ', '', 54, 120, 120, 19, 'uploaded_photos/do tap the duc.png', 'Available', 'Do tap the duc ', '984916'),
+(2017104, 'Ao thun 3 lo nam', '', 12, 100, 100, 19, 'uploaded_photos/ao 3 lo nam.png', 'Available', 'Ao thun 3 lo nam', '65'),
+(2017105, 'Do  tap Erobic', '', 4, 200, 200, 19, 'uploaded_photos/do tap erobic.png', 'Available', 'Do  tap Erobic', '4865865120'),
+(2017106, 'Do the thao hut mo hoi', '', 46, 250, 250, 19, 'uploaded_photos/do the thao hut mo hoi.png', 'Available', 'Do the thao hut mo hoi', '43456');
 
 -- --------------------------------------------------------
 
@@ -316,13 +363,57 @@ CREATE TABLE `tblpromopro` (
 --
 
 INSERT INTO `tblpromopro` (`PROMOID`, `PROID`, `PRODISCOUNT`, `PRODISPRICE`, `PROBANNER`, `PRONEW`) VALUES
-(1, 201737, 0, 119, 0, 0),
-(2, 201738, 0, 199, 0, 0),
-(3, 201739, 0, 289, 0, 0),
-(4, 201740, 0, 149, 0, 0),
-(5, 201741, 0, 89, 0, 0),
-(6, 201742, 0, 287, 0, 0),
-(13, 201749, 0, 189, 0, 0);
+(16, 201752, 0, 169, 0, 0),
+(17, 201753, 0, 250, 0, 0),
+(20, 201756, 0, 250, 0, 0),
+(21, 201757, 0, 250, 0, 0),
+(22, 201758, 0, 250, 0, 0),
+(23, 201759, 0, 250, 0, 0),
+(24, 201760, 0, 270, 0, 0),
+(26, 201762, 0, 280, 0, 0),
+(27, 201763, 0, 250, 0, 0),
+(28, 201764, 0, 300, 0, 0),
+(29, 201765, 0, 420, 0, 0),
+(30, 201766, 0, 420, 0, 0),
+(31, 201767, 0, 420, 0, 0),
+(33, 201769, 0, 300, 0, 0),
+(34, 201770, 0, 300, 0, 0),
+(35, 201771, 0, 300, 0, 0),
+(36, 201772, 0, 300, 0, 0),
+(37, 201773, 0, 450, 0, 0),
+(38, 201774, 0, 500, 0, 0),
+(39, 201775, 0, 150, 0, 0),
+(40, 201776, 0, 350, 0, 0),
+(41, 201777, 0, 200, 0, 0),
+(42, 201778, 0, 160, 0, 0),
+(43, 201779, 0, 320, 0, 0),
+(44, 201780, 0, 360, 0, 0),
+(45, 201781, 0, 320, 0, 0),
+(46, 201782, 0, 500, 0, 0),
+(47, 201783, 0, 551, 0, 0),
+(48, 201784, 0, 620, 0, 0),
+(49, 201785, 0, 600, 0, 0),
+(50, 201786, 0, 720, 0, 0),
+(51, 201787, 0, 1500, 0, 0),
+(52, 201788, 0, 250, 0, 0),
+(53, 201789, 0, 510, 0, 0),
+(54, 201790, 0, 250, 0, 0),
+(55, 201791, 0, 300, 0, 0),
+(56, 201792, 0, 230, 0, 0),
+(57, 201793, 0, 409, 0, 0),
+(58, 201794, 0, 320, 0, 0),
+(59, 201795, 0, 540, 0, 0),
+(60, 201796, 0, 350, 0, 0),
+(61, 201797, 0, 360, 0, 0),
+(62, 201798, 0, 560, 0, 0),
+(63, 201799, 0, 160, 0, 0),
+(64, 2017100, 0, 150, 0, 0),
+(65, 2017101, 0, 200, 0, 0),
+(66, 2017102, 0, 60, 0, 0),
+(67, 2017103, 0, 120, 0, 0),
+(68, 2017104, 0, 100, 0, 0),
+(69, 2017105, 0, 200, 0, 0),
+(70, 2017106, 0, 250, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -390,7 +481,10 @@ INSERT INTO `tblsummary` (`SUMMARYID`, `ORDEREDDATE`, `CUSTOMERID`, `ORDEREDNUM`
 (3, '2019-08-21 06:27:09', 9, 94, 70, 269, 'Cash on Delivery', 'Confirmed', 'Your order has been confirmed.', '2019-08-21 00:00:00', 1, 0),
 (4, '2022-08-15 06:13:51', 10, 95, 70, 219, 'Cash on Delivery', 'Confirmed', 'Your order has been confirmed.', '2022-08-16 00:00:00', 0, 0),
 (5, '2022-08-16 01:51:55', 11, 96, 0, 408, 'Cash on Delivery', 'Confirmed', 'Your order has been confirmed.', '2022-08-16 00:00:00', 0, 0),
-(7, '2022-08-17 12:19:59', 12, 97, 50, 408, 'Cash on Delivery', 'Pending', 'Your order is on process.', '0000-00-00 00:00:00', 1, 0);
+(7, '2022-08-17 12:19:59', 12, 97, 50, 408, 'Cash on Delivery', 'Pending', 'Your order is on process.', '0000-00-00 00:00:00', 1, 0),
+(9, '2023-08-03 07:43:22', 13, 98, 0, 238, 'Cash on Delivery', 'Pending', 'Your order is on process.', '0000-00-00 00:00:00', 1, 0),
+(10, '2023-08-12 03:57:30', 14, 99, 0, 119, 'Cash on Delivery', 'Pending', 'Your order is on process.', '0000-00-00 00:00:00', 0, 0),
+(11, '2023-08-13 05:59:05', 14, 100, 70, 200, 'Cash on Delivery', 'Pending', 'Your order is on process.', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -412,7 +506,11 @@ CREATE TABLE `tbluseraccount` (
 --
 
 INSERT INTO `tbluseraccount` (`USERID`, `U_NAME`, `U_USERNAME`, `U_PASS`, `U_ROLE`, `USERIMAGE`) VALUES
-(129, 'NPIF', 'NPIF', '8dd0d3251d7992a0bd95e68c528b3369153175bd', 'Administrator', 'photos/4564645645646.png');
+(124, 'Brain deo', 'kenjie', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'Staff', 'photos/COC-war-base-design.jpg'),
+(126, 'NPIFAd', 'NPIFAd', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'Administrator', 'photos/apple.jpg.png'),
+(127, 'Nowdemy Manager', 'Manager', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'Encoder', ''),
+(128, 'Thanh', 'thanh@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'Administrator', ''),
+(129, 'Banana', 'Banana', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'Administrator', '');
 
 -- --------------------------------------------------------
 
@@ -435,7 +533,10 @@ CREATE TABLE `tblwishlist` (
 INSERT INTO `tblwishlist` (`id`, `CUSID`, `PROID`, `WISHDATE`, `WISHSTATS`) VALUES
 (2, 9, 201742, '2019-08-21', '0'),
 (3, 10, 201740, '2022-08-15', '0'),
-(4, 12, 201742, '2022-08-17', '0');
+(4, 12, 201742, '2022-08-17', '0'),
+(5, 13, 201750, '2023-08-03', '0'),
+(6, 13, 201742, '2023-08-03', '0'),
+(7, 14, 201737, '2023-08-12', '0');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -569,25 +670,25 @@ ALTER TABLE `tblautonumber`
 -- AUTO_INCREMENT cho bảng `tblcategory`
 --
 ALTER TABLE `tblcategory`
-  MODIFY `CATEGID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `CATEGID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT cho bảng `tblcustomer`
 --
 ALTER TABLE `tblcustomer`
-  MODIFY `CUSTOMERID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `CUSTOMERID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT cho bảng `tblorder`
 --
 ALTER TABLE `tblorder`
-  MODIFY `ORDERID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ORDERID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT cho bảng `tblpromopro`
 --
 ALTER TABLE `tblpromopro`
-  MODIFY `PROMOID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `PROMOID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
 -- AUTO_INCREMENT cho bảng `tblsetting`
@@ -605,7 +706,7 @@ ALTER TABLE `tblstockin`
 -- AUTO_INCREMENT cho bảng `tblsummary`
 --
 ALTER TABLE `tblsummary`
-  MODIFY `SUMMARYID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `SUMMARYID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT cho bảng `tbluseraccount`
@@ -617,7 +718,7 @@ ALTER TABLE `tbluseraccount`
 -- AUTO_INCREMENT cho bảng `tblwishlist`
 --
 ALTER TABLE `tblwishlist`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

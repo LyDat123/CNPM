@@ -80,12 +80,12 @@ if (isset($_SESSION['gcCart'])){
           <div class="col-md-8 clearfix">
             <div class="shop-menu clearfix pull-right">
               <ul class="nav navbar-nav">     
-                <li><a href="<?php echo web_root;?>index.php?q=cart"><i class="text-success fa fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="<?php echo web_root;?>index.php?q=cart"><i class="text-success fa fa-shopping-cart"></i> Giỏ hàng</a></li>
                 <?php if (isset($_SESSION['CUSID'] )) { ?>  
-                  <li><a href="<?php echo web_root?>index.php?q=profile"><i class="fa fa-user"></i> Account</a></li>     
-                  <li><a   href="<?php echo web_root?>logout.php"><i class="fa fa-lock"></i> Logout</a></li>
+                  <li><a href="<?php echo web_root?>index.php?q=profile"><i class="fa fa-user"></i> Tài Khoản</a></li>     
+                  <li><a   href="<?php echo web_root?>logout.php"><i class="fa fa-lock"></i> Đăng Suất</a></li>
                 <?php }else{ ?> 
-                <li><a data-target="#smyModal" data-toggle="modal"  href=""><i class="fa fa-lock"></i> Login</a></li>
+                <li><a data-target="#smyModal" data-toggle="modal"  href=""><i class="fa fa-lock"></i> Đăng Nhập</a></li>
               <?php } ?>
               </ul>
             </div>
@@ -108,7 +108,7 @@ if (isset($_SESSION['gcCart'])){
             </div>
             <div class="mainmenu pull-left">
               <ul class="nav navbar-nav collapse navbar-collapse">
-                <li><a href="<?php echo web_root;?>" class="active"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="<?php echo web_root;?>" class="active"><i class="fa fa-home"></i> Trang chủ</a></li>
                 <li class="dropdown"><a href="#"><i class="fa fa-shopping-cart"></i> Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                        <?php 
@@ -121,8 +121,8 @@ if (isset($_SESSION['gcCart'])){
                                 </li> 
 
          
-                <li><a href="<?php web_root?>index.php?q=product"><i class="fa fa-list-alt"></i> Products</a></li>
-                <li><a href="<?php web_root?>index.php?q=contact"><i class="fa fa-phone"></i> Contact</a></li>
+                <li><a href="<?php web_root?>index.php?q=product"><i class="fa fa-list-alt"></i> Sản phẩm</a></li>
+                <li><a href="<?php web_root?>index.php?q=contact"><i class="fa fa-phone"></i> Liên lạc</a></li>
               </ul>
             </div>
           </div>
@@ -167,7 +167,7 @@ if (isset($_SESSION['gcCart'])){
           <div class="col-sm-3">
             <div class="address">
               <img src="images/home/map.png" alt="" />
-              <p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
+              <p>458/3F Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Thành phố Hồ Chí Minh</p>
             </div>
           </div>
         </div>
@@ -176,23 +176,23 @@ if (isset($_SESSION['gcCart'])){
     
     <div class="footer-widget">
       <div class="container">
-        <p>You can modify this section using your own personal information</p>
+        <p></p>
         <div class="row">
           <div class="col-sm-3">
             <div class="single-widget">
-              <h2>Service</h2>
+              <h2>Dịch vụ</h2>
               <ul class="nav nav-pills nav-stacked">
-                <li><a href="#">Online Help</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Order Status</a></li>
-                <li><a href="#">Change Location</a></li>
-                <li><a href="#">FAQ’s</a></li>
+                <li><a href="#">Trợ giúp Online</a></li>
+                <li><a href="#">Liên lạc với chúng tôi</a></li>
+                <li><a href="#">Tình Trạng Đặt Hàng</a></li>
+                <li><a href="#">Thay Đổi Vị Trí</a></li>
+                <li><a href="#">Câu Hỏi Thường Xuyên</a></li>
               </ul>
             </div>
           </div>
           <div class="col-sm-3">
             <div class="single-widget">
-              <h2>Quick Shop</h2>
+              <h2>Xem Nhanh</h2>
               <ul class="nav nav-pills nav-stacked">
                  <?php 
                       $mydb->setQuery("SELECT * FROM `tblcategory` LIMIT 6");
@@ -206,25 +206,25 @@ if (isset($_SESSION['gcCart'])){
           </div>
           <div class="col-sm-3">
             <div class="single-widget">
-              <h2>Policies</h2>
+              <h2>Chính Sách</h2>
               <ul class="nav nav-pills nav-stacked">
-                <li><a href="#">Terms of Use</a></li>
-                <li><a href="#">Privecy Policy</a></li>
-                <li><a href="#">School Management System</a></li>
-                <li><a href="#">Point of Sales</a></li>
-                <li><a href="#">Bitcoin Mining System</a></li>
+                <li><a href="#">Điều Khoản Sử Dụng</a></li>
+                <li><a href="#">Riêng Tư</a></li>
+                <li><a href="#">Hệ Thống Quản Lý</a></li>
+                <li><a href="#">Điểm Bán Hàng</a></li>
+                <li><a href="#">Bitcoin Mining</a></li>
               </ul>
             </div>
           </div>
           <div class="col-sm-3">
             <div class="single-widget">
-              <h2>About Shopper</h2>
+              <h2>  Về Khách Hàng</h2>
               <ul class="nav nav-pills nav-stacked">
-                <li><a href="#">Company Information</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Store Location</a></li>
-                <li><a href="#">Affillate Program</a></li>
-                <li><a href="#">Copyright</a></li>
+                <li><a href="#">Thông Tin Công Ty</a></li>
+                <li><a href="#">Tuyển Nhân Viên</a></li>
+                <li><a href="#">Các Vị Trí Cửa Hàng</a></li>
+                <li><a href="#">Các Chương Trình Liên Kết</a></li>
+                <li><a href="#">Bản Quyền</a></li>
               </ul>
             </div>
           </div>

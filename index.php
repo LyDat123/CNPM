@@ -23,16 +23,25 @@ switch ($view) {
         $title="Track Order";	
 		$content='customer/trackorder.php';		
 		break;
-	case 'orderdetails' :  
-         If(!isset($_SESSION['orderdetails'])){
-         $_SESSION['orderdetails'] = "Order Details";
-		} 
-		$content='customer/orderdetails.php';	
-	if( isset($_SESSION['orderdetails'])){
-      if (@count($_SESSION['orderdetails'])>0){
-        	$title = 'Cart List' . '| <a href="">Order Details</a>';
-		      }
-		    } 
+	// case 'orderdetails' :  
+    //      If(!isset($_SESSION['orderdetails'])){
+    //      $_SESSION['orderdetails'] = "Order Details";
+	// 	} 
+	// 	$content='customer/orderdetails.php';	
+	// if( isset($_SESSION['orderdetails'])){
+    //   if (@count($_SESSION['orderdetails'])>0){
+    //     	$title = 'Cart List' . '| <a href="">Order Details</a>';
+	// 	      }
+	// 	    } 
+	// 	break;
+	case 'orderdetails':
+		if (!isset($_SESSION['orderdetails'])) {
+			$_SESSION['orderdetails'] = array(); // Thay đổi đây để đảm bảo $_SESSION['orderdetails'] là một mảng rỗng
+		}
+		$content = 'customer/orderdetails.php';
+		if (is_array($_SESSION['orderdetails']) && count($_SESSION['orderdetails']) > 0) {
+			$title = 'Cart List' . '| <a href="">Order Details</a>';
+		}
 		break;
 	case 'billing' : 	
 	 If(!isset($_SESSION['billingdetails'])){
